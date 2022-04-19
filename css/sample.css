@@ -1,0 +1,89 @@
+*{
+    zoom: 90%;
+}
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+    background-color: aqua;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:100%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:100px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+
+.text{
+    font-size: 26px;
+    height: auto;
+    border-bottom:1px solid #fff;
+    margin: 0;
+}
+
+.rogo{
+    width: fit-content;
+}
+.img1{
+    width: 366px;
+    height: auto;
+    padding: 140px 150px 25px 150px;
+}
+.img{
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    font-size: 150px;
+    height: 400px;
+}
+li:hover{
+    background: #b12512;
+    color:#fff;
+}
+
+.resultTable{
+    display: flex;
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    width:100%;
+
+}
+
+.result{
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    align-items: center;
+
+}
