@@ -8,29 +8,30 @@
   <title>じゃんけん</title>
 </head>
 
-<body>
+<body class="color-change-2x">
   <header>
     <h1 class="jk">じゃんけん</h1>
   </header>
 
-  <main style="display: none;">
+
+  <main style="display: none;" >
     <p class="text">試合数：
       <span id="gameCount">0</span>
     </p>
     <ul>
       <li class="rogo"><img src="img/ツーリストロゴ.png" alt=""width="auto"height="aout"></li>
-      <li id="gu_btn"><img src="img/ぐー.png"alt=""width="256px"></li>
+      <li id="gu_btn"><img src="img/ぐー.png"alt=""width="256px" ></li>
       <li id="cho_btn"><img src="img/ちょき.png" alt=""width="256px"></li>
       <li id="par_btn"><img src="img/ぱー.png" alt=""width="256px"></li>
     </ul>
     <div>
       <ul>
           <li class="img1" ><img src="img/メイン.png" alt="" width="270px" height="200px"></li>
-          <li class="img" id="com_hand">勝負！</li>
+          <li class="img" id="com_hand">READY!?</li>
       </ul>
     </div>
     
-    <div class="result" id="result" >結果は？</div>
+    <div class="result" id="result" >結果</div>
       <div class="resultTable" id="resultTable">
           <ul>
             <li class="text">勝ち数</li>
@@ -43,12 +44,17 @@
             <li class="text" id="winRate">ー</li>
           </ul>
       </div>
-
+      
       <div id="reset"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
 
   </main>
 
-  <footer>フッター</footer>
+  <footer>
+  
+
+
+  </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
@@ -61,6 +67,9 @@
     });
     let gameCount=0
     let winResult=0
+    let loseResult=0
+
+
 
 
     //グーのとき
@@ -78,7 +87,7 @@
         if (randomNumber === 1) {
           $("#result").html("<span><img src=img/win.png width=500px></span>");
           $("#com_hand").html("<span><img src=img/ちょき.png width=256px></span>");
-          winResult+=1
+          winResult += 1
 
         } else if (randomNumber === 2) {
           $("#result").html("<span><img src=img/draw.png width=280px></span>");
@@ -87,6 +96,7 @@
         } else if (randomNumber === 3) {
           $("#result").html("<span><img src=img/lose.png width=500px></span>");
           $("#com_hand").html("<span><img src=img/ぱー.png width=256px></span>");
+          loseResult += 1
 
         } else {
           alert("エラー");
@@ -111,10 +121,13 @@
         } else if (randomNumber === 2) {
           $("#result").html("<span><img src=img/draw.png width=280px></span>");
           $("#com_hand").html("<span><img src=img/ちょき.png width=256px></span>");
+          loseResult += 1
 
         } else if (randomNumber === 3) {
           $("#result").html("<span><img src=img/lose.png width=500px></span>");
           $("#com_hand").html("<span><img src=img/ぐー.png width=256px></span>");
+          winResult += 1
+
 
         } else {
           alert("エラー");
@@ -136,10 +149,12 @@
         if (randomNumber === 1) {
           $("#result").html("<span><img src=img/win.png width=500px></span>");
           $("#com_hand").html("<span><img src=img/ぐー.png width=256px></span>");
+          loseResult += 1
 
         } else if (randomNumber === 2) {
           $("#result").html("<span><img src=img/draw.png width=280px></span>");
           $("#com_hand").html("<span><img src=img/ぱー.png width=256px></span>");
+          winResult += 1
 
         } else if (randomNumber === 3) {
           $("#result").html("<span><img src=img/lose.png width=500px></span>");
@@ -156,6 +171,7 @@
         const loseCount = document.getElementById('loseCount')
         const winRate = document.getElementById('winRate');
 
+        //10回終わったら結果のアラートがでるように
         const alert = (winResult, loseResult) => {
           if (winResult > loseResult) {
             window.alert('勝ち越しました！');
@@ -167,7 +183,7 @@
         }
 
         const resetClick = () => {
-          //ボタン要素作成
+        //ボタン要素作成
           const resetBtn = document.createElement('input');
           resetBtn.type = 'button';
           resetBtn.value = '更新';
@@ -188,8 +204,9 @@
           winRate.textContent = `${winRateResult}%`;
         }
         
+        //試合数が１０回に到達したら実行される処理
         function gameset(){
-            if (gameCount === 10) { //試合数が１０回に到達したら実行される処理
+            if (gameCount === 10) { 
             winCount.textContent = `${winResult}回`;
             loseCount.textContent = `${loseResult}回`;
             winRateCalc(gameCount, winResult);

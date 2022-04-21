@@ -1,49 +1,72 @@
 *{
-    zoom: 90%;
+    zoom: 86%;
+    padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+    background-color: aqua;
+
 }
+
+
+
+
 body{
     margin:0;
     padding:0;
     text-align:left;
     font-size: 32px;
-    background-color: aqua;
+    background-image: url("/img/bcimg.png");
+    animation: infinite;
+
 }
 header{
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
     text-align: center;
+
 }
-main{
-}
+
+
+    
+
+
+
 footer{
     background-color: #fff;
-    border-bottom:1px solid #ccc;
     text-align: center;
+    background-color: aqua;
+
 }
 p{
     font-size:100%;
     text-align: center;
-    border-bottom:1px solid #fff;
     height:100px;
+    background-color: aqua;
+
 }
 ul{
     padding: 0;
-    border-top: 1px solid #000000;
     display:table;  /* 定義 */
     table-layout: fixed;
     width:100%;
+    background-color: aqua;
+
 }
 li{
     text-align: center;
     list-style-type:none;
-    border: 1px solid #666;
     background-color: #FFF;
     display:table-cell;  /* 定義 */
     cursor: pointer;
+    background-color: aqua;
+
 }
 
 .text{
-    font-size: 26px;
+    font-size: 80px;
     height: auto;
     border-bottom:1px solid #fff;
     margin: 0;
@@ -53,17 +76,23 @@ li{
     width: fit-content;
 }
 .img1{
-    width: 366px;
+    width: 900px;
     height: auto;
-    padding: 140px 150px 25px 150px;
+    padding: 140px 400px 25px 350px;
+    text-align: center;
 }
+
+
 .img{
     width: auto;
-    text-align: center;
-    margin: 0 auto;
+    text-align:left;
+    margin: 0 100px;
     align-items: center;
     font-size: 150px;
     height: 400px;
+    color:rgb(92, 92, 241);
+    padding: 0 0 0 300px;
+
 }
 li:hover{
     background: #b12512;
@@ -76,6 +105,8 @@ li:hover{
     border-top: 1px solid #000000;
     display:table;  /* 定義 */
     width:100%;
+    color: rgb(114, 112, 112);
+
 
 }
 
@@ -85,5 +116,17 @@ li:hover{
     margin: 0 auto;
     top: 50%;
     align-items: center;
+    font-size: 100px;
+    background-color: rgb(36, 116, 116);
+    color: #fff;
+    height: 190px;
 
 }
+
+
+
+
+
+
+
+
